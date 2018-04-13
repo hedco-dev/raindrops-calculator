@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaindropsCalculator.Core", "RaindropsCounter.Core\RaindropsCalculator.Core.csproj", "{BE69564C-FDE1-41BD-B966-026A92A3408D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaindropsCalculator.Tests", "RaindropsCounter.Tests\RaindropsCalculator.Tests.csproj", "{BB883DBB-2A80-46D9-8C71-600FB1038A04}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE69564C-FDE1-41BD-B966-026A92A3408D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE69564C-FDE1-41BD-B966-026A92A3408D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE69564C-FDE1-41BD-B966-026A92A3408D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE69564C-FDE1-41BD-B966-026A92A3408D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB883DBB-2A80-46D9-8C71-600FB1038A04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB883DBB-2A80-46D9-8C71-600FB1038A04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB883DBB-2A80-46D9-8C71-600FB1038A04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB883DBB-2A80-46D9-8C71-600FB1038A04}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1628080A-42BE-4DEF-A22C-89D774D6F329}
+	EndGlobalSection
+EndGlobal
