@@ -17,6 +17,14 @@ namespace RaindropsCalculator.Tests
         protected void SetUp() => raindropCounter = new RaindropsCounter();
 
         [Test]
+        public void EmptyDataTest()
+        {
+            var expected = 0;
+            var result = raindropCounter.Solve(new int[] { });
+            Assert.AreEqual(expected, result);
+        }
+
+        [Test]
         public void NormalDataTest()
         {
             var expected = 8;

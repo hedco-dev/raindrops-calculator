@@ -10,14 +10,14 @@ namespace RaindropsCalculator.Core
     {
         public int MaxHeight => 32000;
         public int MinHeight => 0;
-        private bool IsHill(int colvalue, int row)
+        private bool IsHill(int height, int row)
         {
-            return row <= colvalue;
+            return row <= height;
         }
         public int Solve(int[] heights)
         {
-            var max = heights.Max();
-            var min = heights.Min();
+            var max = heights.DefaultIfEmpty(0).Max();
+            var min = heights.DefaultIfEmpty(0).Min();
             if (max >= MaxHeight)
             {
                 throw new ArgumentOutOfRangeException(nameof(MaxHeight));
@@ -28,26 +28,25 @@ namespace RaindropsCalculator.Core
             }
 
             var all = 0;
-            for (int row = 1; row <= max; row++)
+            for (int row = min; row <= max; row++)
             {
-                var h = 0;
-                var p = 0;
+                var hills = 0;
+                var pits = 0;
                 for (int col = 0; col < heights.Length; col++)
                 {
-                    var colvalue = heights[col];
-                    if (IsHill(colvalue, row))
+                    var height = heights[col];
+                    if (IsHill(height, row))
                     {
-                        h++;
-                        if (h > 1)
+                        hills++;
+                        if (hills > 1)
                         {
-                            all += p;
-                            p = 0;
+                            all += pits;
+                            pits = 0;
                         }
-                        continue;
                     }
                     else
                     {
-                        p++;
+                        pits++;
                     }
                 }
             }
